@@ -2,10 +2,17 @@
   "name": "tactical-table",
   "version": "1.0.0",
   "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
   "repository": "git@github.com:fabioper/tactical-table.git",
   "author": "Fábio Pereira <fabiopereira.fps@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.0.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
   }
 }
