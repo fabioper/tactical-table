@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node -r dotenv/config app"
+    "dev": "node -r dotenv/config app"
   },
   "repository": "git@github.com:fabioper/tactical-table.git",
   "author": "Fábio Pereira <fabiopereira.fps@gmail.com>",
@@ -12,6 +12,7 @@
     "eslint": "^4.0.0"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "morgan": "^1.8.2"
