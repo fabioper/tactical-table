@@ -1,5 +1,5 @@
 const router = require('express').Router()
 
-// router.use('/', require('./teams'))
+// router.use('/teams', require('./teams'))
 
 module.exports = router
