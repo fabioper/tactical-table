@@ -9,5 +9,5 @@ app.use(logger('dev'))
 app.use('/', require('./routes'))
 
 app.listen(config.PORT, () => {
-    console.log(`Express app listening on port ${ config.PORT }`)
+    console.log(`Express app listening on port ${config.PORT}`)
 })

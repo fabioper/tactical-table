@@ -38,7 +38,7 @@
         "quotes": ["error", "single"],
         "sort-imports": "warn",
         "sort-vars": "warn",
-        "template-curly-spacing": ["error", "always"],
+        "template-curly-spacing": ["error", "never"],
         "valid-typeof": "warn"
     }
 }
