@@ -10,6 +10,16 @@ if (process.env.NODE_ENV !== 'test') {
 
 app.use('/', require('./routes'));
 
+// generic error handler
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.status(500);
+    res.json({
+        error: err,
+        status: res.statusCode
+    });
+});
+
 app.listen(config.port, () => {
     console.log(`Express app listening on port ${config.port}`);
 });
