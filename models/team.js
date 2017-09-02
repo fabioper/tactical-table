@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 
 const TeamSchema = new Schema({
     fullName: { type: String, required: true },
+    shortName: {
+        type: String,
+        maxlength: 3,
+        required: true
+    },
     foundation: Date,
     city: String,
     country: String,
