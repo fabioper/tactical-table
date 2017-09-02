@@ -1,13 +1,15 @@
-const express = require('express')
-const logger = require('morgan')
-const config = require('./config').get(process.env.NODE_ENV)
+const config = require('./config').get(process.env.NODE_ENV);
+const express = require('express');
+const logger = require('morgan');
 
-const app = express()
+const app = express();
 
-app.use(logger('dev'))
+if (process.env.NODE_ENV !== 'test') {
+    app.use(logger('dev'));
+}
 
-app.use('/', require('./routes'))
+app.use('/', require('./routes'));
 
-app.listen(config.PORT, () => {
-    console.log(`Express app listening on port ${config.PORT}`)
-})
+app.listen(config.port, () => {
+    console.log(`Express app listening on port ${config.port}`);
+});

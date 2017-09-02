@@ -1,5 +1,6 @@
-const router = require('express').Router()
+const config = require('../config').get(process.env.NODE_ENV);
+const router = require('express').Router();
 
-// router.use('/teams', require('./teams'))
+router.use('/teams', require('./teams'));
 
-module.exports = router
+module.exports = router;
