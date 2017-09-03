@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const PlayerSchema = new Schema({
     fullName: {
@@ -17,8 +17,8 @@ const PlayerSchema = new Schema({
         ref: 'team'
     },
     footStatsId: String
-});
+})
 
-const Player = mongoose.model('player', PlayerSchema);
+const Player = mongoose.model('player', PlayerSchema)
 
-module.exports = Player;
+module.exports = Player

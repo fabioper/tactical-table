@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 beforeEach(done => {
-    const { teams, players } = mongoose.connection.collections;
+    const { teams, players } = mongoose.connection.collections
 
     Promise.all([teams.drop(), players.drop()])
         .then(() => done())
-        .catch(() => done());
-});
+        .catch(() => done())
+})

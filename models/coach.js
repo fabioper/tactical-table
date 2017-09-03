@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const CoachSchema = new Schema({
     fullName: {
@@ -15,8 +15,8 @@ const CoachSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'team'
     }
-});
+})
 
-const Coach = mongoose.model('coach', CoachSchema);
+const Coach = mongoose.model('coach', CoachSchema)
 
-module.exports = Coach;
+module.exports = Coach

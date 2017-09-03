@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const TeamSchema = new Schema({
     fullName: { type: String, required: true },
@@ -13,8 +13,8 @@ const TeamSchema = new Schema({
     city: String,
     country: String,
     image: String
-});
+})
 
-const Team = mongoose.model('team', TeamSchema);
+const Team = mongoose.model('team', TeamSchema)
 
-module.exports = Team;
+module.exports = Team
