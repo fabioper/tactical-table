@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const TeamSchema = new Schema({
     fullName: { type: String, required: true },
-    shortName: {
+    shortName: String,
+    initials: {
         type: String,
         maxlength: 3,
         required: true
