@@ -12,8 +12,7 @@ const TeamSchema = new Schema({
     foundation: Date,
     city: String,
     country: String,
-    image: String,
-    footStatsId: String
+    image: String
 });
 
 const Team = mongoose.model('team', TeamSchema);
