@@ -1,4 +1,4 @@
-const config = require('./config').get(process.env.NODE_ENV)
+const config = require('./config/vars').get(process.env.NODE_ENV)
 const express = require('express')
 const logger = require('morgan')
 
