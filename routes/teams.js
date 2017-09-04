@@ -1,3 +1,7 @@
-const router = require('express').Router();
+const router = require('express').Router()
+const teamsController = require('../controllers/teams_controller')
 
-module.exports = router;
+// Get all teams
+router.get('/', teamsController.index)
+
+module.exports = router
