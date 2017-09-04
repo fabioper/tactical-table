@@ -21,7 +21,9 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(config.port, () => {
-    console.log(`Express app listening on port ${config.port}`)
+    if (process.env.NODE_ENV !== 'test') {
+        console.log(`Express app listening on port ${config.port}`)
+    }
 })
 
 module.exports = app
