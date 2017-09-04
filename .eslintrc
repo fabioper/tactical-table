@@ -19,11 +19,13 @@
         "arrow-parens": ["error", "as-needed"],
         "arrow-body-style": ["warn", "as-needed"],
         "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "comma-spacing": ["error", { "before": false, "after": true }],
         "camelcase": "warn",
         "dot-notation": "error",
         "eqeqeq": "error",
+        // "func-names": ["warn", "always"],
         "func-style": ["error", "expression"],
-        "id-length": ["error", { "min": 3, "max": 15 }],
+        "id-length": ["warn", { "min": 2, "max": 15 }],
         "indent": ["error", 4],
         "new-cap": "warn",
         "no-array-constructor": "error",
@@ -56,7 +58,7 @@
         "radix": "error",
         "semi": ["warn", "never"],
         "space-before-function-paren": ["error", {
-            "anonymous": "always",
+            "anonymous": "never",
             "named": "never",
             "asyncArrow": "always"
             }],
