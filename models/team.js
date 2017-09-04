@@ -6,7 +6,7 @@ const TeamSchema = new Schema({
     shortName: String,
     abbreviation: {
         type: String,
-        maxlength: 3,
+        maxlength: 4,
         required: true
     },
     foundation: Date,
