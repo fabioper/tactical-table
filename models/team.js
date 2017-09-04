@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const TeamSchema = new Schema({
     fullName: { type: String, required: true },
     shortName: String,
-    initials: {
+    abbreviation: {
         type: String,
         maxlength: 3,
         required: true
