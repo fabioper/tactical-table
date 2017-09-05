@@ -48,7 +48,7 @@ describe('GET /teams', () => {
             .catch(done)
     })
 
-    it('should limit, filter and sort when receiving limit, filterBy and sortBy queries', done => {
+    it('should be possible to use sortBy, filterBy and limit together', done => {
         request(app)
             .get('/teams?sortBy=-name&limit=1&filterBy=name,city,-_id')
             .expect(200)
