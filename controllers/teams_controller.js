@@ -1,9 +1,9 @@
 const Team = require('../models/team')
 
-const index = (req, res, next) => {
+const index = (req, res) => {
     Team.find()
-        .then(results => res.json(results))
-        .catch(next)
+        .then(teams => res.json({ results: teams }))
+        .catch(err => res.status(400).send(err))
 }
 
 module.exports = { index }
