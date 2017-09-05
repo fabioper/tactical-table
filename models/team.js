@@ -2,14 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const TeamSchema = new Schema({
-    fullName: { type: String, required: true },
-    shortName: String,
-    abbreviation: {
+    name: {
         type: String,
-        maxlength: 4,
         required: true
     },
-    foundation: Date,
     city: String,
     country: String,
     image: String
