@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app",
-    "test": "nodemon --exec 'NODE_ENV=test mocha --recursive -R min'"
+    "test": "nodemon --exec 'NODE_ENV=test mocha --recursive'"
   },
   "repository": "git@github.com:fabioper/tactical-table.git",
   "author": "Fábio Pereira <fabiopereira.fps@gmail.com>",
