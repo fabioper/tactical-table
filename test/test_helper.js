@@ -1,9 +1,15 @@
-const mongoose = require('mongoose')
+const Team = require('../models/team')
+const db = require('../db')
 
 beforeEach(done => {
-    const { teams } = mongoose.connection.collections
-
-    Promise.all([teams.drop()])
+    Promise.all([Team.collection.drop()])
         .then(() => done())
-        .catch(() => done())
+        .catch(err => done(err))
+})
+
+describe('GET /teams', () => {
+    it('should pass', done => {
+        console.log('hheeey')
+        done()
+    })
 })
