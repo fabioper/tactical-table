@@ -1,4 +1,4 @@
-const config = require('../config/vars').get(process.env.NODE_ENV)
+const config = require('./config').get(process.env.NODE_ENV)
 const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
