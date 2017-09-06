@@ -14,4 +14,10 @@ const index = (req, res) => {
         })
 }
 
-module.exports = { index }
+const create = (req, res) => {
+    Team.create(req.body)
+        .then(team => res.redirect(`/teams/${team._id}`))
+        .catch(err => res.status(400).send(err))
+}
+
+module.exports = { index, create }
