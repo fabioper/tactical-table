@@ -23,8 +23,10 @@ const create = (req, res) => {
 
 const edit = (req, res) => {
     const _id = req.params.id
+    const { fields } = req.queries
 
     Team.findById(_id)
+        .select(fields)
         .then(team => {
             if (!team) {
                 return res.status(404)

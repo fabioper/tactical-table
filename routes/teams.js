@@ -7,5 +7,6 @@ const jsonParser = bodyParser.json()
 
 router.get('/', queryParser, teamsController.index)
 router.post('/', jsonParser, teamsController.create)
+router.get('/:id', queryParser, teamsController.edit)
 
 module.exports = router
