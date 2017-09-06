@@ -10,18 +10,19 @@ const appendTo = function(obj, query, reverseValue = 0) {
 }
 
 const queryParser = function(req, res, next) {
-    const { sortBy, filterBy, limit } = req.query
+    const { sort, fields, limit, skip } = req.query
 
     const opts = {
         sort: {},
         fields: {},
+        skip: parseInt(skip, 10) || 0,
         limit: parseInt(limit, 10) || 0
     }
 
-    if (sortBy) appendTo(opts.sort, sortBy, -1)
+    if (sort) appendTo(opts.sort, sort, -1)
 
-    if (filterBy) {
-        const fieldsArr = filterBy.split(',')
+    if (fields) {
+        const fieldsArr = fields.split(',')
         fieldsArr.forEach(field => appendTo(opts.fields, field))
     }
 
