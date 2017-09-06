@@ -21,7 +21,7 @@ const create = (req, res) => {
         .catch(err => res.status(400).send(err))
 }
 
-const edit = (req, res) => {
+const show = (req, res) => {
     const _id = req.params.id
     const { fields } = req.queries
 
@@ -37,4 +37,4 @@ const edit = (req, res) => {
         .catch(err => res.status(400).send(err))
 }
 
-module.exports = { index, create, edit }
+module.exports = { index, create, show }
